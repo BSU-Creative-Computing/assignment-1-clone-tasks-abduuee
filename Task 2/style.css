@@ -1,0 +1,293 @@
+/* Styling the body */
+body {
+  font-family: sans-serif;
+  margin: 0%; 
+  background-color: rgb(234, 234, 234); 
+}
+
+/* Styling the header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem;
+  background: #1e90ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.8rem;
+  user-select: none;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Checkbox for Responsive Navigation */
+#check {
+  display: none;
+}
+
+/* Styling for Mobile Navigation Icon */
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+
+/* Search Input Styling */
+.search-input {
+  padding: 10px 12rem 10px 5px;
+  border: 1px solid #eee;
+  text-align: left;
+  margin-left: 11%;
+}
+
+.navbar {
+  margin-right: 4%;
+}
+
+/* Navigation Links Styling */
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-left: 1rem;
+}
+
+/* Hover Effect on Navigation Links */
+.navbar a:hover {
+  color: #044383;
+  transition: 0.3s ease;
+}
+
+label p {
+  color: white;
+}
+
+/* Properties to Make Navigation Bar Responsive */
+@media screen and (max-width: 800px) {
+  .searchBar {
+    display: none;
+  }
+
+  .icons {
+    display: inline-flex;
+    margin-right: 5%;
+    color: white;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgb(93, 174, 255);
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+
+  #check:checked~.navbar {
+    height: 15rem;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+}
+
+/* Main Content Styling */
+main {
+  max-width: 80rem;
+  margin: 0 auto; /* Center the container */
+  margin-top: 7%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: -1.5%;
+}
+
+p {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.808);
+  line-height: 20px;
+}
+
+/* Box Styling */
+.box {
+  background-color: white;
+  border: 2px solid rgba(201, 201, 201, 0.276);
+  padding: 20px;
+  border-radius: 1%;
+  box-shadow: 2px 2px 2px rgb(201, 201, 201);
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  flex: 1;
+}
+
+/* Side Section Styling */
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1.4;
+}
+
+.box1 {
+  padding: 0;
+  flex: 2;
+  height: fit-content;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+#text1 {
+  padding: 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Styling for Buttons */
+#button {
+  font-size: 14px;
+  height: 30px;
+  width: 100px;
+  background-color: rgb(52, 157, 249);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+/* Footer Styling */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Media Queries for Different Screen Sizes */
+@media (min-width: 400px) {
+  main {
+    margin-top: 19%;
+  }
+}
+
+@media (min-width: 481px) {
+  main {
+    margin-top: 12.5%;
+  }
+  .box2 {
+    flex-direction: row;
+  }
+  .box3 {
+    flex-direction: row;
+  }
+  .button3 {
+    margin-top: 7%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    flex-direction: row;
+    margin-top: 9%;
+  }
+
+  .box1 {
+    flex: 3;
+  }
+
+  .box2 {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+
+  .box3 {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1280px) {
+  main {
+    margin-top: 8%;
+  }
+  .box1 {
+    flex: 2;
+  }
+  .box2 {
+    flex-direction: row;
+  }
+  .box3 {
+    flex-direction: row;
+  }
+  .button3 {
+    margin-top: 22%;
+  }
+  .button4 {
+    margin-top: 1.6%;
+  }
+  .gunmentext {
+    font-size: 1.44em;
+  }
+}
+
+@media (min-width: 1450px) {
+  main {
+    width: 85%;
+  }
+  .button3 {
+    margin-top: 21%;
+  }
+  .button4 {
+    margin-top: 2%;
+  }
+}
