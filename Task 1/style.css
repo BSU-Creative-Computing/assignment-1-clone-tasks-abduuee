@@ -1,0 +1,91 @@
+/* Setting the default styles for the body */
+body {
+    margin: 0 auto; /* Margin to control the body */
+    width: 100%; /* Set the body width */
+}
+
+/* Styling the header and footer */
+header {
+    padding: 20px;
+}
+
+footer {
+    background-color: #14181d; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+}
+
+/* Arranging images into rows */
+.image-rows {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+/* Styling for images */
+.image-rows img {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+/* Media query for devices with a screen width up to 480px */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 1%; 
+    }
+
+    header img {
+        width: 10%; 
+    }
+
+    .image-rows img {
+        width: 100%;
+    }
+
+    #paras {
+        margin: 4%; 
+    }
+
+    footer {
+        padding: 0.78%; 
+    }
+}
+
+/* Media query for screens between 481px and 800px */
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    .image-rows img {
+        width: 50%;
+    }
+
+    #paras {
+        margin: 2%; 
+    }
+}
+
+/* Media query for screens between 801px and 1024px */
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+    .image-rows img {
+        width: 33.33%; 
+    }
+
+    #paras {
+        margin: 2%; 
+    }
+}
+
+/* Media query for screens larger than 1025px */
+@media screen and (min-width: 1025px) {
+    body {
+        width: 80%; 
+    }
+
+    .image-rows img {
+        width: 33.33%; 
+    }
+
+    #paras {
+        margin: 1.7%; 
+    }
+}
