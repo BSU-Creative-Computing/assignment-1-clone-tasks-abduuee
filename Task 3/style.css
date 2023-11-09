@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e2eff1;
+}
+
+header {
+  background-color: #8ccff7;
+  margin-bottom: 5.2%;
+}
+@media screen and (max-width: 801px) and (min-width: 481px) {
+  header {
+    margin-bottom: 7%;
+  }
+}
+@media screen and (max-width: 481px) {
+  header {
+    margin-bottom: 10%;
+  }
+}
+
+img.responsive-image {
+  display: block;
+  margin: auto;
+}
+
+.one,
+.two,
+.three {
+  display: none;
+}
+
+@media screen and (min-width: 801px) {
+  .one {
+    margin: auto;
+    width: 40%;
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 801px) and (min-width: 481px) {
+  .two {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .three {
+    margin: auto;
+    width: 45%;
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.rows, .rows .row4, .rows .row3, .rows .row2, .rows .row1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rows .row1 {
+  background-color: #4e89ae;
+  height: 40px;
+}
+.rows .row1:hover {
+  background-color: #444;
+}
+
+.rows .row2 {
+  background-color: #43658b;
+  height: 40px;
+}
+.rows .row2:hover {
+  background-color: #444;
+}
+
+.rows .row3 {
+  background-color: #ed6663;
+  height: 40px;
+}
+.rows .row3:hover {
+  background-color: #444;
+}
+
+.rows .row4 {
+  background-color: #ffa372;
+  height: 40px;
+  margin-bottom: 4%;
+}
+.rows .row4:hover {
+  background-color: #444;
+}
+@media screen and (max-width: 481px) {
+  .rows .row4 {
+    margin-bottom: 7%;
+  }
+}
+
+.circles, .circles .circle4, .circles .circle3, .circles .circle2, .circles .circle1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 5px;
+}
+@media screen and (max-width: 621px) {
+  .circles, .circles .circle4, .circles .circle3, .circles .circle2, .circles .circle1 {
+    display: block;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+.circles .circle1 {
+  background-color: #4e89ae;
+  height: 70px;
+  width: 70px;
+}
+.circles .circle1:hover {
+  background-color: #444;
+}
+
+.circles .circle2 {
+  background-color: #43658b;
+  height: 80px;
+  width: 80px;
+}
+.circles .circle2:hover {
+  background-color: #444;
+}
+
+.circles .circle3 {
+  background-color: #ed6663;
+  height: 90px;
+  width: 90px;
+}
+.circles .circle3:hover {
+  background-color: #444;
+}
+
+.circles .circle4 {
+  background-color: #ffa372;
+  height: 100px;
+  width: 100px;
+}
+.circles .circle4:hover {
+  background-color: #444;
+}
+
+footer {
+  height: 50px;
+  background-color: #8ccff7;
+  margin-top: 4%;
+}/*# sourceMappingURL=style.css.map */
