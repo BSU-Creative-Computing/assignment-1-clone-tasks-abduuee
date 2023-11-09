@@ -1,0 +1,215 @@
+// Variables
+
+$background: #e2eff1;
+$bg-color1: #4e89ae;
+$bg-color2: #43658b;
+$bg-color3: #ed6663;
+$bg-color4: #ffa372;
+$hover-color: #444;
+$header-footer: #8ccff7;
+
+// Mixins
+
+// Mixin to center elements using flexbox
+@mixin center-elements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Mixin for hover effect
+@mixin hover {
+    &:hover {
+        background-color: $hover-color;
+        }
+}
+
+// Mixin for vertical alignment in smaller screens
+@mixin verticallyalign {
+    @media screen and (max-width:621px) {
+        @content;
+    }
+}
+
+// Mixin for the first breakpoint
+@mixin firstbreakpoint {
+    @media screen and (min-width:801px) {
+        @content;
+    }
+}
+
+// Mixin for the second breakpoint
+@mixin secondbreakpoint {
+    @media screen and (max-width:801px) and (min-width:481px) {
+        @content;
+    }
+}
+
+// Mixin for the third breakpoint
+@mixin thirdbreakpoint {
+    @media screen and (max-width:481px) {
+        @content;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Styling for the body
+body {
+    background-color: $background;
+}
+
+// Styling for the header
+header {
+    background-color: $header-footer;
+    margin-bottom: 5.2%;
+    @include secondbreakpoint() {
+        margin-bottom: 7%;
+    }
+    @include thirdbreakpoint() {
+        margin-bottom: 10%;
+    }
+}
+
+// Styling for the images
+img.responsive-image {
+    display: block;
+    margin: auto;
+}
+
+// Responsive image styling
+.one,
+.two,   
+.three {
+    display: none;
+}
+
+.one {
+    @include firstbreakpoint() {
+        margin: auto;
+        width: 40%;
+        display: flex;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.two {
+    @include secondbreakpoint() {
+        margin: auto;
+        width: 50%;
+        display: flex;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.three {
+    @include thirdbreakpoint() {
+        margin: auto;
+        width: 45%;
+        display: flex;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// Styling for the rows section
+.rows {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+// Styling for individual row elements
+.rows .row1 {
+    @extend .rows;
+    @include hover();
+    background-color: $bg-color1;
+    height: 40px;
+}
+
+.rows .row2 {
+    @extend .rows;
+    @include hover();
+    background-color: $bg-color2;
+    height: 40px;
+}
+
+.rows .row3 {
+    @extend .rows;
+    @include hover();
+    background-color: $bg-color3;
+    height: 40px;
+}
+
+.rows .row4 {
+    @extend .rows;
+    @include hover();
+    background-color: $bg-color4;
+    height: 40px;
+    margin-bottom: 4%;
+    @include thirdbreakpoint() {
+        margin-bottom: 7%;
+    }
+}
+
+// Styling for the circles section
+.circles {
+    @include center-elements();
+    border-radius: 50%;
+    margin: 5px;
+    @include verticallyalign() {
+        display: block;
+        margin: auto;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+// Styling for individual circle elements
+.circles .circle1 {
+    @extend .circles;
+    @include hover();
+    background-color: $bg-color1;
+    height: 70px;
+    width: 70px;
+}
+
+.circles .circle2 {
+    @extend .circles;
+    @include hover();
+    background-color: $bg-color2;
+    height: 80px;
+    width: 80px;
+}
+
+.circles .circle3 {
+    @extend .circles;
+    @include hover();
+    background-color: $bg-color3;
+    height: 90px;
+    width: 90px;
+}
+
+.circles .circle4 {
+    @extend .circles;
+    @include hover();
+    background-color: $bg-color4;
+    height: 100px;
+    width: 100px;
+}
+
+// Styling for the footer
+footer {
+    height: 50px;
+    background-color: $header-footer;
+    margin-top: 4%;
+}
